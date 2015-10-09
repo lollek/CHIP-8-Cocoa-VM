@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "40189090CA11217A7CD4AD199F1BE019D225E932" : 0,
+    "76A15575C5B740800EF8E92EA66B97A276AEF659" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CC10F440-E7D6-46A5-BA0B-D2E9451E81F3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "40189090CA11217A7CD4AD199F1BE019D225E932" : "chip8-core\/",
+    "76A15575C5B740800EF8E92EA66B97A276AEF659" : "chip8-core\/lib\/googletest\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "chip8cocoa",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "chip8cocoa.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:lollek\/CHIP-8-Virtual-Machine-Core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "40189090CA11217A7CD4AD199F1BE019D225E932"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:google\/googletest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76A15575C5B740800EF8E92EA66B97A276AEF659"
+    }
+  ]
+}
