@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		555003D31BC7DD920082548A /* ViewScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555003D21BC7DD920082548A /* ViewScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		555003D51BC7E0340082548A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555003D41BC7E0340082548A /* OpenGL.framework */; };
 		555E9B381BC706B200C09761 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555E9B371BC706B200C09761 /* AppDelegate.m */; };
 		555E9B3B1BC706B200C09761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555E9B3A1BC706B200C09761 /* main.m */; };
 		555E9B3D1BC706B200C09761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555E9B3C1BC706B200C09761 /* Assets.xcassets */; };
 		555E9B401BC706B200C09761 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555E9B3E1BC706B200C09761 /* MainMenu.xib */; };
+		55ECEDF61BC7EBF1008D836B /* ViewScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55ECEDF51BC7EBF1008D836B /* ViewScreen.mm */; settings = {ASSET_TAGS = (); }; };
 		55F3D4461BC7E8A1002FB30F /* libchip8core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F3D4451BC7E8A1002FB30F /* libchip8core.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		555003D21BC7DD920082548A /* ViewScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewScreen.xib; sourceTree = "<group>"; };
 		555003D41BC7E0340082548A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		555E9B331BC706B200C09761 /* chip8cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chip8cocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555E9B361BC706B200C09761 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,8 +25,9 @@
 		555E9B3C1BC706B200C09761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555E9B3F1BC706B200C09761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		555E9B411BC706B200C09761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55ECEDF41BC7EBF1008D836B /* ViewScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewScreen.h; sourceTree = "<group>"; };
+		55ECEDF51BC7EBF1008D836B /* ViewScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewScreen.mm; sourceTree = "<group>"; };
 		55F3D4451BC7E8A1002FB30F /* libchip8core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchip8core.a; path = "CHIP-8-Virtual-Machine-Core/build/libchip8core.a"; sourceTree = "<group>"; };
-		55F3D4471BC7E9E6002FB30F /* chip8core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = chip8core; path = "CHIP-8-Virtual-Machine-Core/include/chip8core"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,6 @@
 		555E9B2A1BC706B200C09761 = {
 			isa = PBXGroup;
 			children = (
-				55F3D4471BC7E9E6002FB30F /* chip8core */,
 				55F3D4451BC7E8A1002FB30F /* libchip8core.a */,
 				555003D41BC7E0340082548A /* OpenGL.framework */,
 				555E9B351BC706B200C09761 /* chip8cocoa */,
@@ -69,7 +68,8 @@
 				555E9B371BC706B200C09761 /* AppDelegate.m */,
 				555E9B3C1BC706B200C09761 /* Assets.xcassets */,
 				555E9B3E1BC706B200C09761 /* MainMenu.xib */,
-				555003D21BC7DD920082548A /* ViewScreen.xib */,
+				55ECEDF41BC7EBF1008D836B /* ViewScreen.h */,
+				55ECEDF51BC7EBF1008D836B /* ViewScreen.mm */,
 				555E9B411BC706B200C09761 /* Info.plist */,
 				555E9B391BC706B200C09761 /* Supporting Files */,
 			);
@@ -143,7 +143,6 @@
 			files = (
 				555E9B3D1BC706B200C09761 /* Assets.xcassets in Resources */,
 				555E9B401BC706B200C09761 /* MainMenu.xib in Resources */,
-				555003D31BC7DD920082548A /* ViewScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +155,7 @@
 			files = (
 				555E9B3B1BC706B200C09761 /* main.m in Sources */,
 				555E9B381BC706B200C09761 /* AppDelegate.m in Sources */,
+				55ECEDF61BC7EBF1008D836B /* ViewScreen.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +265,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = se.iix.chip8cocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CHIP-8-Virtual-Machine-Core/include";
 			};
 			name = Debug;
 		};
@@ -281,6 +282,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = se.iix.chip8cocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CHIP-8-Virtual-Machine-Core/include";
 			};
 			name = Release;
 		};

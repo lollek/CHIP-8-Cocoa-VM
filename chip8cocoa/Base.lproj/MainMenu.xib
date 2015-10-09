@@ -128,7 +128,7 @@
                     <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDC-V7-aLr">
                         <rect key="frame" x="0.0" y="0.0" width="640" height="320"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-F7-NaL" customClass="ViewScreen">
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-7Y-b3o" customClass="ViewScreen">
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="320"/>
                             </customView>
                         </subviews>

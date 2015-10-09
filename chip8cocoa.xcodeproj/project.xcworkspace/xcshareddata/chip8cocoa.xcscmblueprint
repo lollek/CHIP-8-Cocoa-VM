@@ -1,13 +1,16 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EDF906FF0EFE7CFF0924FD0E76755DFF1D5F0762",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EDF906FF0EFE7CFF0924FD0E76755DFF1D5F0762" : 0,
     "40189090CA11217A7CD4AD199F1BE019D225E932" : 0,
     "76A15575C5B740800EF8E92EA66B97A276AEF659" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CC10F440-E7D6-46A5-BA0B-D2E9451E81F3",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EDF906FF0EFE7CFF0924FD0E76755DFF1D5F0762" : "chip8cocoa\/",
     "40189090CA11217A7CD4AD199F1BE019D225E932" : "chip8-core\/",
     "76A15575C5B740800EF8E92EA66B97A276AEF659" : "chip8-core\/lib\/googletest\/"
   },
@@ -24,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:google\/googletest.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76A15575C5B740800EF8E92EA66B97A276AEF659"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:lollek\/CHIP-8-Cocoa-VM.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EDF906FF0EFE7CFF0924FD0E76755DFF1D5F0762"
     }
   ]
 }
