@@ -12,7 +12,7 @@
 		555E9B3B1BC706B200C09761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555E9B3A1BC706B200C09761 /* main.m */; };
 		555E9B3D1BC706B200C09761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555E9B3C1BC706B200C09761 /* Assets.xcassets */; };
 		555E9B401BC706B200C09761 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555E9B3E1BC706B200C09761 /* MainMenu.xib */; };
-		55ECEDF61BC7EBF1008D836B /* ViewScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55ECEDF51BC7EBF1008D836B /* ViewScreen.mm */; settings = {ASSET_TAGS = (); }; };
+		55ECEDF61BC7EBF1008D836B /* ViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 55ECEDF51BC7EBF1008D836B /* ViewScreen.m */; settings = {ASSET_TAGS = (); }; };
 		55F3D4461BC7E8A1002FB30F /* libchip8core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F3D4451BC7E8A1002FB30F /* libchip8core.a */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		555E9B3F1BC706B200C09761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		555E9B411BC706B200C09761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55ECEDF41BC7EBF1008D836B /* ViewScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewScreen.h; sourceTree = "<group>"; };
-		55ECEDF51BC7EBF1008D836B /* ViewScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewScreen.mm; sourceTree = "<group>"; };
+		55ECEDF51BC7EBF1008D836B /* ViewScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewScreen.m; sourceTree = "<group>"; };
 		55F3D4451BC7E8A1002FB30F /* libchip8core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchip8core.a; path = "CHIP-8-Virtual-Machine-Core/build/libchip8core.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,7 @@
 				555E9B3C1BC706B200C09761 /* Assets.xcassets */,
 				555E9B3E1BC706B200C09761 /* MainMenu.xib */,
 				55ECEDF41BC7EBF1008D836B /* ViewScreen.h */,
-				55ECEDF51BC7EBF1008D836B /* ViewScreen.mm */,
+				55ECEDF51BC7EBF1008D836B /* ViewScreen.m */,
 				555E9B411BC706B200C09761 /* Info.plist */,
 				555E9B391BC706B200C09761 /* Supporting Files */,
 			);
@@ -155,7 +155,7 @@
 			files = (
 				555E9B3B1BC706B200C09761 /* main.m in Sources */,
 				555E9B381BC706B200C09761 /* AppDelegate.m in Sources */,
-				55ECEDF61BC7EBF1008D836B /* ViewScreen.mm in Sources */,
+				55ECEDF61BC7EBF1008D836B /* ViewScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
