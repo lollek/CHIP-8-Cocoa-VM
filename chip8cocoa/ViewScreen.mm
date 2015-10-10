@@ -8,10 +8,12 @@
 
 #import "OpenGL/gl.h"
 
+#import "chip8core/Emulator.h"
+
 #import "ViewScreen.h"
 
 @implementation ViewScreen {
-    uint8_t     pixels[64 * 32 / 8];
+    Emulator emulator;
 }
 
 - (void)prepareOpenGL {
@@ -24,16 +26,17 @@
 }
 
 - (void)drawGraphicsEvent {
+    uint8_t const* pixels = emulator.getGraphicsData();
     uint8_t pixelsAsBytes[64 * 32];
     for (unsigned i = 0; i < 64 * 32 / 8; ++i) {
-        pixelsAsBytes[i*8 + 0] = arc4random() % 2 /*pixels[i] & 0x80*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 1] = arc4random() % 2 /*pixels[i] & 0x40*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 2] = arc4random() % 2 /*pixels[i] & 0x20*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 3] = arc4random() % 2 /*pixels[i] & 0x10*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 4] = arc4random() % 2 /*pixels[i] & 0x08*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 5] = arc4random() % 2 /*pixels[i] & 0x04*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 6] = arc4random() % 2 /*pixels[i] & 0x02*/ ? 0xFF : 0x00;
-        pixelsAsBytes[i*8 + 7] = arc4random() % 2 /*pixels[i] & 0x01*/ ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 0] = pixels[i] & 0x80 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 1] = pixels[i] & 0x40 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 2] = pixels[i] & 0x20 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 3] = pixels[i] & 0x10 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 4] = pixels[i] & 0x08 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 5] = pixels[i] & 0x04 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 6] = pixels[i] & 0x02 ? 0xFF : 0x00;
+        pixelsAsBytes[i*8 + 7] = pixels[i] & 0x01 ? 0xFF : 0x00;
     }
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE, 64,32, 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, pixelsAsBytes);

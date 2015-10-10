@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "chip8cocoa/ViewScreen.mm"
-            timestampString = "466188900.720805"
+            timestampString = "466194568.844076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "-drawGraphicsEvent"
             landmarkType = "5">
          </BreakpointContent>
