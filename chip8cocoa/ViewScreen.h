@@ -10,6 +10,9 @@
 
 @interface ViewScreen : NSOpenGLView
 
+- (void)keyUp:(NSEvent*)theEvent;
+- (void)keyDown:(NSEvent *)theEvent;
+
 - (void)loadFile:(NSString*)path;
 
 @end

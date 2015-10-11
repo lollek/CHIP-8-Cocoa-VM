@@ -20,17 +20,49 @@
     emulator.loadFileToRam(std::string([path UTF8String]));
 }
 
-
 - (void)prepareOpenGL {
     [super prepareOpenGL];
     emulator.onGraphics = ^(void) { [self drawGraphicsEvent]; };
     emulator.onSound = ^(void) { [[NSSound soundNamed:@"Pop"] play]; };
-    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG"];
+    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG2"];
     [NSTimer scheduledTimerWithTimeInterval:0.016
                                      target:self
                                    selector:@selector(tick)
                                    userInfo:nil
                                     repeats:YES];
+}
+
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
+
+- (void)keyUp:(NSEvent *)theEvent {
+    [self keyPressed:theEvent down:false];
+}
+
+- (void)keyDown:(NSEvent *)theEvent {
+    [self keyPressed: theEvent down:true];
+}
+
+- (void)keyPressed:(NSEvent *)theEvent down:(BOOL)down {
+    switch ([theEvent keyCode]) {
+        case 18: emulator.setKeyState( 0, down); break;
+        case 19: emulator.setKeyState( 1, down); break;
+        case 20: emulator.setKeyState( 2, down); break;
+        case 21: emulator.setKeyState( 3, down); break;
+        case 12: emulator.setKeyState( 4, down); break;
+        case 13: emulator.setKeyState( 5, down); break;
+        case 14: emulator.setKeyState( 6, down); break;
+        case 15: emulator.setKeyState( 7, down); break;
+        case  0: emulator.setKeyState( 8, down); break;
+        case  1: emulator.setKeyState( 9, down); break;
+        case  2: emulator.setKeyState(10, down); break;
+        case  3: emulator.setKeyState(11, down); break;
+        case  6: emulator.setKeyState(12, down); break;
+        case  7: emulator.setKeyState(13, down); break;
+        case  8: emulator.setKeyState(14, down); break;
+        case  9: emulator.setKeyState(15, down); break;
+    }
 }
 
 - (void)tick {
