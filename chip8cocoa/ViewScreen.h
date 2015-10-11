@@ -10,4 +10,6 @@
 
 @interface ViewScreen : NSOpenGLView
 
+- (void)loadFile:(NSString*)path;
+
 @end

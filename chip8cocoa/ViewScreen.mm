@@ -16,13 +16,25 @@
     Emulator emulator;
 }
 
+- (void)loadFile:(NSString*)path {
+    emulator.loadFileToRam(std::string([path UTF8String]));
+}
+
+
 - (void)prepareOpenGL {
     [super prepareOpenGL];
+    emulator.onGraphics = ^(void) { [self drawGraphicsEvent]; };
+    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG"];
     [NSTimer scheduledTimerWithTimeInterval:0.016
                                      target:self
-                                   selector:@selector(drawGraphicsEvent)
+                                   selector:@selector(tick)
                                    userInfo:nil
                                     repeats:YES];
+    
+}
+
+- (void)tick {
+    emulator.tick();
 }
 
 - (void)drawGraphicsEvent {
