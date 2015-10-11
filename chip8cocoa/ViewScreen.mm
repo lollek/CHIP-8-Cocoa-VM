@@ -24,13 +24,13 @@
 - (void)prepareOpenGL {
     [super prepareOpenGL];
     emulator.onGraphics = ^(void) { [self drawGraphicsEvent]; };
+    emulator.onSound = ^(void) { [[NSSound soundNamed:@"Pop"] play]; };
     [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG"];
     [NSTimer scheduledTimerWithTimeInterval:0.016
                                      target:self
                                    selector:@selector(tick)
                                    userInfo:nil
                                     repeats:YES];
-    
 }
 
 - (void)tick {
