@@ -6,17 +6,20 @@
 //  Copyright © 2015 Olle Kvarnstrom. All rights reserved.
 //
 
+#import "ViewScreen.h"
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property IBOutlet ViewScreen *viewScreen;
+
 @end
 
 
 @implementation AppDelegate
 
-/*
 - (void)openDocument:(id)sender {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     
@@ -24,19 +27,18 @@
     [panel setCanChooseFiles:YES];
     [panel setCanChooseDirectories:NO];
     [panel setAllowsMultipleSelection:NO];
-    [panel setAllowedFileTypes:[NSArray arrayWithObject:@"ch8"]];
     
     [panel beginWithCompletionHandler:^(NSInteger result){
         if (result == NSFileHandlingPanelOKButton) {
             
             for (NSURL *fileURL in [panel URLs]) {
-                [viewScreen loadfile filename:fileURL];
+                [self.viewScreen loadFile:[fileURL path]];
+                return;
             }
         }
         
     }];
 }
- */
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application

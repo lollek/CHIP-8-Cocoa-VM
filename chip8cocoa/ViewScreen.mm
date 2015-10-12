@@ -17,14 +17,15 @@
 }
 
 - (void)loadFile:(NSString*)path {
-    emulator.loadFileToRam(std::string([path UTF8String]));
+    NSLog(@"LoadFile called. Path: %s", [path UTF8String]);
+    NSLog(@"%d", emulator.loadFileToRam(std::string([path UTF8String])));
 }
 
 - (void)prepareOpenGL {
     [super prepareOpenGL];
     emulator.onGraphics = ^(void) { [self drawGraphicsEvent]; };
     emulator.onSound = ^(void) { [[NSSound soundNamed:@"Pop"] play]; };
-    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/BRIX"];
+    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG2"];
     [NSTimer scheduledTimerWithTimeInterval:0.0016
                                      target:self
                                    selector:@selector(tick)
