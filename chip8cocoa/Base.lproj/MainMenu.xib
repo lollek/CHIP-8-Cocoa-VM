@@ -73,6 +73,11 @@
                                     <action selector="openDocument:" target="-1" id="bVn-NM-KNZ"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Reload" keyEquivalent="r" id="OI8-b2-071">
+                                <connections>
+                                    <action selector="reload:" target="-1" id="DaS-8E-gqx"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Open Recent" id="tXI-mr-wws">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">

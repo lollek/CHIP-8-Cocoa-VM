@@ -13,6 +13,7 @@
 - (void)keyUp:(NSEvent*)theEvent;
 - (void)keyDown:(NSEvent *)theEvent;
 
+- (void)reloadFile;
 - (void)loadFile:(NSString*)path;
 
 @end

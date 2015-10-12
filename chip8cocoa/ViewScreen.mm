@@ -13,25 +13,33 @@
 #import "ViewScreen.h"
 
 @implementation ViewScreen {
-    Emulator emulator;
+    Emulator  emulator;
+    NSString* lastFileName;
+}
+
+- (void)reloadFile {
+    if (lastFileName != nil) {
+        [self loadFile:lastFileName];
+    }
 }
 
 - (void)loadFile:(NSString*)path {
-    NSLog(@"LoadFile called. Path: %s", [path UTF8String]);
-    NSLog(@"%d", emulator.loadFileToRam(std::string([path UTF8String])));
+    emulator.loadFileToRam(std::string([path UTF8String]));
+    if (lastFileName == nil) {
+        [NSTimer scheduledTimerWithTimeInterval:0.0016
+                                         target:self
+                                       selector:@selector(tick)
+                                       userInfo:nil
+                                        repeats:YES];
+    }
+    lastFileName = path;
 }
 
 - (void)prepareOpenGL {
     [super prepareOpenGL];
     emulator.onGraphics = ^(void) { [self drawGraphicsEvent]; };
     emulator.onSound = ^(void) { [[NSSound soundNamed:@"Pop"] play]; };
-    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG2"];
-    [NSTimer scheduledTimerWithTimeInterval:0.0016
-                                     target:self
-                                   selector:@selector(tick)
-                                   userInfo:nil
-                                    repeats:YES];
-}
+    }
 
 - (BOOL)acceptsFirstResponder {
     return YES;

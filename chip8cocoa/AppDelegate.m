@@ -40,6 +40,10 @@
     }];
 }
 
+- (void)reload:(id)sender {
+    [self.viewScreen reloadFile];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 }
