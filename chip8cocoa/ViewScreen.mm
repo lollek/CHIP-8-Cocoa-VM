@@ -55,22 +55,22 @@
 
 - (void)keyPressed:(NSEvent *)theEvent down:(BOOL)down {
     switch ([theEvent keyCode]) {
-        case 18: emulator.setKeyState( 0, down); break;
-        case 19: emulator.setKeyState( 1, down); break;
-        case 20: emulator.setKeyState( 2, down); break;
-        case 21: emulator.setKeyState( 3, down); break;
-        case 12: emulator.setKeyState( 4, down); break;
-        case 13: emulator.setKeyState( 5, down); break;
-        case 14: emulator.setKeyState( 6, down); break;
-        case 15: emulator.setKeyState( 7, down); break;
-        case  0: emulator.setKeyState( 8, down); break;
-        case  1: emulator.setKeyState( 9, down); break;
-        case  2: emulator.setKeyState(10, down); break;
-        case  3: emulator.setKeyState(11, down); break;
-        case  6: emulator.setKeyState(12, down); break;
-        case  7: emulator.setKeyState(13, down); break;
-        case  8: emulator.setKeyState(14, down); break;
-        case  9: emulator.setKeyState(15, down); break;
+        case 18: emulator.setKeyState(0x1, down); break;
+        case 19: emulator.setKeyState(0x2, down); break;
+        case 20: emulator.setKeyState(0x3, down); break;
+        case 21: emulator.setKeyState(0xC, down); break;
+        case 12: emulator.setKeyState(0x4, down); break;
+        case 13: emulator.setKeyState(0x5, down); break;
+        case 14: emulator.setKeyState(0x6, down); break;
+        case 15: emulator.setKeyState(0xD, down); break;
+        case  0: emulator.setKeyState(0x7, down); break;
+        case  1: emulator.setKeyState(0x8, down); break;
+        case  2: emulator.setKeyState(0x9, down); break;
+        case  3: emulator.setKeyState(0xE, down); break;
+        case  6: emulator.setKeyState(0xA, down); break;
+        case  7: emulator.setKeyState(0x0, down); break;
+        case  8: emulator.setKeyState(0xB, down); break;
+        case  9: emulator.setKeyState(0xF, down); break;
     }
 }
 
