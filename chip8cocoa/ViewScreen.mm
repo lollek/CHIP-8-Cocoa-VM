@@ -24,7 +24,7 @@
     [super prepareOpenGL];
     emulator.onGraphics = ^(void) { [self drawGraphicsEvent]; };
     emulator.onSound = ^(void) { [[NSSound soundNamed:@"Pop"] play]; };
-    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/PONG2"];
+    [self loadFile:@"/Users/iix/git/chip8cocoa/CHIP-8-Virtual-Machine-Core/roms/MAZE"];
     [NSTimer scheduledTimerWithTimeInterval:0.016
                                      target:self
                                    selector:@selector(tick)
